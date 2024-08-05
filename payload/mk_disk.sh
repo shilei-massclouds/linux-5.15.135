@@ -1,7 +1,7 @@
 rm -f ./disk.img
 
 dd if=/dev/zero of=./disk.img bs=1M count=256
-mkfs.ext4 ./disk.img
+mkfs.ext2 ./disk.img
 
 mkdir -p ./mnt
 sudo mount ./disk.img ./mnt

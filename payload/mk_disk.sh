@@ -15,8 +15,10 @@ sudo mkdir -p ./mnt/testcases
 sudo mkdir -p ./mnt/opt
 sudo mkdir -p ./mnt/btp
 
+sudo cp -r ../../lkmodel/btp/etc ./mnt/
 sudo cp -r ../../lkmodel/btp/build/riscv64/sbin/ ./mnt/btp/
 sudo cp ../../lkmodel/btp/syscalls ./mnt/opt/
+sudo cp ../../lkmodel/btp/btp_tests ./mnt/opt/
 sudo cp ../../dash/src/dash ./mnt/btp/sbin/
 
 sudo rm ./mnt/sbin/init
@@ -29,10 +31,11 @@ sudo cp /usr/riscv64-linux-gnu/lib/libc.so.6 ./mnt/lib/
 sudo cp /usr/riscv64-linux-gnu/lib/libm.so.6 ./mnt/lib/
 sudo cp /usr/riscv64-linux-gnu/lib/libresolv.so.2 ./mnt/lib/
 
-ls ./mnt/lib
-ls ./mnt/testcases
-ls ./mnt/opt
-ls ./mnt/
+ls -l ./mnt/lib
+ls -l ./mnt/testcases
+ls -l ./mnt/opt
+ls -l ./mnt/etc
+ls -l ./mnt/
 
 sudo umount ./mnt
 rm -rf ./mnt

@@ -11,6 +11,7 @@ sudo cp -rf ../../busybox/output_riscv64/* ./mnt/
 sudo mkdir -p ./mnt/lib
 sudo mkdir -p ./mnt/tmp
 sudo mkdir -p ./mnt/proc
+sudo mkdir -p ./mnt/dev
 sudo mkdir -p ./mnt/testcases
 sudo mkdir -p ./mnt/opt
 sudo mkdir -p ./mnt/btp

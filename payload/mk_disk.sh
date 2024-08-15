@@ -22,6 +22,9 @@ sudo cp ../../lkmodel/btp/syscalls ./mnt/opt/
 sudo cp ../../lkmodel/btp/btp_tests ./mnt/opt/
 sudo cp ../../dash/src/dash ./mnt/btp/sbin/
 
+sudo rm -f ./mnt/bin/sh
+sudo cp ../../dash/src/dash ./mnt/bin/sh
+
 sudo rm ./mnt/sbin/init
 sudo cp ./mnt/btp/sbin/init ./mnt/sbin/init
 
@@ -36,6 +39,7 @@ ls -l ./mnt/lib
 ls -l ./mnt/testcases
 ls -l ./mnt/opt
 ls -l ./mnt/etc
+ls -l ./mnt/bin
 ls -l ./mnt/
 
 sudo umount ./mnt

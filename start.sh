@@ -7,5 +7,5 @@ fi
 
 ${QEMU} -m 128M -smp 1 -machine virt \
 -bios default -kernel ./output/vmlinuz-5.15.135+ \
--device virtio-blk-device,drive=disk0 -drive id=disk0,if=none,format=raw,file=./payload/disk.img \
+-device virtio-blk-device,drive=disk0 -drive id=disk0,if=none,format=raw,file=../lkmodel/disk.img \
 -nographic -append "earlycon=sbi root=/dev/vda rw console=ttyS0 init=$1"
